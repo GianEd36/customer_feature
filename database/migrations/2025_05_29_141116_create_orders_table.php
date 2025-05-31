@@ -10,26 +10,24 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::create('orders', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('user_id')->constrained()->onDelete('cascade');
-    $table->decimal('total_price', 10, 2);
-    $table->string('status')->default('pending');
-    $table->string('tracking_number')->nullable();
+    {
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->decimal('total_price', 10, 2);
+            $table->string('status')->default('pending');
+            $table->string('tracking_number')->nullable();
 
-    // 🏠 Shipping fields
-    $table->string('shipping_name');
-    $table->string('shipping_address');
-    $table->string('shipping_city');
-    $table->string('shipping_zip');
-    $table->string('shipping_country');
+            //Shipping fields
+            $table->string('shipping_name');
+            $table->string('shipping_address');
+            $table->string('shipping_city');
+            $table->string('shipping_zip');
+            $table->string('shipping_country');
 
-    $table->timestamps();
-});
-
-
-}
+            $table->timestamps();
+        });
+    }
 
 
     /**

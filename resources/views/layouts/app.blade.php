@@ -13,7 +13,6 @@
     <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="/cart">Cart</a></li>
         <li class="nav-item"><a class="nav-link" href="/orders/history">Order History</a></li>
-        <!-- You can add login/logout links here if needed -->
     </ul>
 </nav>
 

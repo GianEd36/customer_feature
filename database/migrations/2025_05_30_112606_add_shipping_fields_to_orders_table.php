@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-      Schema::table('orders', function (Blueprint $table) {
-    $table->string('shipping_name');
-    $table->string('shipping_address');
-    $table->string('shipping_city');
-    $table->string('shipping_zip');
-    $table->string('shipping_country');
-});
-
+        Schema::table('orders', function (Blueprint $table) {
+            $table->string('shipping_name');
+            $table->string('shipping_address');
+            $table->string('shipping_city');
+            $table->string('shipping_zip');
+            $table->string('shipping_country');
+        });
     }
 
     /**

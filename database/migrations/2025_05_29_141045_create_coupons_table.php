@@ -10,17 +10,16 @@ return new class extends Migration
      * Run the migrations.
      */
    public function up()
-{
-   Schema::create('coupons', function (Blueprint $table) {
-    $table->id();
-    $table->string('code')->unique();
-    $table->enum('discount_type', ['fixed', 'percent']);
-    $table->decimal('discount_amount', 8, 2);
-    $table->date('expiration_date');
-    $table->timestamps();
-});
-
-}
+    {
+        Schema::create('coupons', function (Blueprint $table) {
+            $table->id();
+            $table->string('code')->unique();
+            $table->enum('discount_type', ['fixed', 'percent']);
+            $table->decimal('discount_amount', 8, 2);
+            $table->date('expiration_date');
+            $table->timestamps();
+        });
+    }
 
 
     /**
